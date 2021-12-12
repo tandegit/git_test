@@ -1,6 +1,3 @@
-# GIT的菜鸟教程笔记和使用指南
-本项目为个人笔记，篇幅大概五分钟
-
 # git笔记
 基本概念
 * 工作区:能在电脑看到的目录
@@ -78,6 +75,29 @@
         git blame <file> //看指定文件的修改
 ## 标签
 在里程碑那种时候可以标个标签，比如用 `git tag -a v1.0`命令给最新一次提交打上（HEAD）"v1.0"的标签,Git 会打开你的编辑器，让你写一句标签注解
+## Gith远程库
+`git remote add 远程库 地址`这个指令中单个远程库名不可=可关联多个地址（代码托管仓）
+
+        使用以下命令生成 SSH Key：
+        $ ssh-keygen -t rsa -C "youremail@example.com"
+        为了验证是否成功，输入以下命令：
+        $ ssh -T git@github.com
+        提交到 Github
+        $ git remote add origin git@github.com:tianqixin/runoob-git-test.git
+        //这个origin是远程库名，自己定义
+        $ git push -u origin master
+* 查看当前的远程库
+        `git remote //加-v可以看实际链接`
+* 提取远程仓库(更新本地库)
+  
+        git fetch  远程库名//从远程仓库下载新分支与数据，
+        相当于告诉git它有我没有的数据
+        git merge  远程库/分支名//合并到自己的本地分支
+* 推送到远程仓库
+推送你的新分支与数据到某个远端仓库命令:
+
+        git push alias(远程库名) branch（分支名）
+* 删除远程库
+        `git remote rm [别名]`
 
                 
-
